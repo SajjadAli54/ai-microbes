@@ -1,4 +1,4 @@
-import joblib as job
+import pickle
 import numpy as np
 from flask import Flask, jsonify, render_template, request
 from sklearn.preprocessing import StandardScaler
@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 # Create flask app
 app = Flask(__name__)
 # loaded the joblib model
-model = job.load("./random_forest.joblib")
+model =  pickle.load(open('model.pkl', 'rb'))
 sc = StandardScaler()
 
 # this app will take me to the home page
