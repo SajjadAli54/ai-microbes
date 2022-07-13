@@ -1,4 +1,4 @@
-flask-2.1.2
+flask
 sklearn-1.1.1
 numpy-1.23.1
 joblib-1.1.0
