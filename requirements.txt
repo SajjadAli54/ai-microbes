@@ -1,4 +1,4 @@
-appdirs==1.4.3
+appdirs
 apt-clone
 apturl
 argon2-cffi
