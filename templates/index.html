@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML File</title>
+
+    <style>
+      body {
+        background-color: black;
+        /* text-align: center; */
+        padding: 0px;
+      }
+      button {
+        margin-left: 670px;
+        font-size: larger;
+        background-color: yellow;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      table {
+        margin: 20px;
+      }
+
+      .My {
+        margin-left: 267px;
+      }
+      #text {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="color: white">
+      <form action="{{ url_for('predict')}}" method="post">
+        <h2 style="text-align: Center; color: yellow">Microbens Prediction</h2>
+        <br />
+
+        <table>
+          <tr>
+            <td>
+              <input
+                class="input"
+                id="Soli"
+                name="Solidity"
+                type="number "
+                required="required"
+                placeholder="Solidity"
+              />
+            </td>
+
+            <td>
+              <input
+                class="input"
+                id="Eccen"
+                name="Eccentricity"
+                type="number "
+                required="required"
+                placeholder="Eccentricity"
+              />
+            </td>
+
+            <td>
+              <input
+                class="input"
+                id="Equi"
+                name="EquivDiameter"
+                type="float"
+                required="required"
+                placeholder="EquivDiameter"
+              />
+            </td>
+
+            <td>
+              <input
+                class="input"
+                id="Ext"
+                name="Extrema"
+                type="float"
+                required="required"
+                placeholder="Extrema"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                class="input"
+                id="Fill"
+                name="FilledArea"
+                type="number "
+                required="required"
+                placeholder="FilledArea"
+              />
+            </td>
+
+            <td>
+              <input
+                class="input"
+                id="Orien"
+                name="Orientation"
+                type="number "
+                required="required"
+                placeholder="Orientation"
+              />
+            </td>
+
+            <td>
+              <input
+                class="input"
+                id="Euler"
+                name="EulerNumber"
+                type="float"
+                required="required"
+                placeholder="EulerNumber"
+              />
+            </td>
+
+            <td>
+              <input
+                class="input"
+                id="box2"
+                name="BoundingBox2 "
+                type="float"
+                required="required"
+                placeholder="BoundingBox2"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                class="input"
+                id="box3"
+                name="BoundingBox3"
+                type="number "
+                required="required"
+                placeholder="BoundingBox3"
+              />
+            </td>
+
+            <td>
+              <input
+                class="input"
+                id="box4"
+                name="BoundingBox4"
+                type="number "
+                required="required"
+                placeholder="BoundingBox4"
+              />
+            </td>
+            <td>
+              <input
+                class="input"
+                id="Minor"
+                name="MinAxisLen"
+                type="float"
+                required="required"
+                placeholder="MinAxisLen"
+              />
+            </td>
+            <td>
+              <input
+                class="input"
+                id="peri"
+                name="Perimeter"
+                type="float"
+                required="required"
+                placeholder="Perimeter"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input
+                style="margin-left: 490px"
+                id="Con"
+                name="ConvexArea"
+                type="number "
+                required="required"
+                placeholder="ConvexArea"
+              />
+            </td>
+
+            <td colspan="2">
+              <input
+                class="input"
+                id="Raddi"
+                name="Raddi"
+                type="number "
+                required="required"
+                placeholder="Raddi"
+              />
+            </td>
+          </tr>
+        </table>
+
+        <br /><br />
+        <button id="sub" type="submit ">Micro-life Prediction</button>
+      </form>
+      <br /><br />
+      <h3 id="text">{{ prediction_text }}</h3>
+    </div>
+  </body>
+</html>
